@@ -1,0 +1,3 @@
+permalink: /blog/:year/:title
+gems:
+  - jemoji

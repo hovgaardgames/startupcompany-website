@@ -1,0 +1,18 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="container">
+  <div class="blog-logo">
+    <img src="/images/logo.png">
+    <a class="landing-link" href="/">Go To Landing Page</a>
+  </div>
+  {% for post in site.posts %}
+    <div class="white">
+      <a href="{{post.url}}"><h2 class="blog-post-title">{{ post.title }}</h2></a>
+      <h4 class="blog-post-date">Posted {{ post.date | date_to_string }}</h4>
+      <div class="blog-post-content">{{ post.content }}</div>
+    </div>
+  {% endfor %}
+</div>

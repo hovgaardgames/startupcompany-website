@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body id="blog-body">
+    <div class="container">
+      <div class="blog-logo">
+        <img src="/images/logo.png">
+        <a class="landing-link" href="/blog">Return to Blog</a>
+      </div>
+      <div class="white">
+        <h2 class="blog-post-title">{{ page.title }}</h2>
+        <h4 class="blog-post-date">Posted {{ page.date | date_to_string }}</h4>
+        <div class="blog-post-content">
+          {{ content }}
+        </div>
+      </div>
+      <div class="grey">
+        <div id="disqus_thread"></div>
+          <script>
+          /**
+          * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+          */
+          
+          var disqus_config = function () {
+            // this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "{{ page.id }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          
+          s.src = '//startupcompany.disqus.com/embed.js';
+          
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+    </div>
+    <script id="dsq-count-scr" src="//startupcompany.disqus.com/count.js" async></script>
+  </body>
+</html>
