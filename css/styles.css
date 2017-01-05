@@ -248,3 +248,15 @@ ul li {
 .blog-post-content .img-left {
   float: left;
 }
+
+#social-links {
+    text-align: center;
+}
+
+#social-links a {
+    margin: 0 10px;
+}
+
+#social-links a img {
+    width: 60px;
+}
