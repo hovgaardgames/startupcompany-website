@@ -260,3 +260,10 @@ ul li {
 #social-links a img {
     width: 60px;
 }
+
+#greenlight {
+    margin-bottom: 30px;
+}
+#greenlight img {
+    max-width: 100%;
+}
