@@ -258,7 +258,7 @@ ul li {
 }
 
 #social-links a img {
-    width: 60px;
+    max-width: 60px;
 }
 
 #greenlight {
