@@ -11,7 +11,9 @@ title: Startup Company: The Game
     </div>
 
     <div id="video" class="text-center">
-        <div id="player"></div>
+        <div class="video-container">
+          <iframe width="853" height="480" src="https://www.youtube.com/embed/aBTtJ_JVQ5c" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
 
     <div class="text-center">
@@ -128,7 +130,7 @@ title: Startup Company: The Game
         </div>
     </div>
 
-    <div class="white" id="preorder">
+    <div class="white text-center" id="preorder">
         <h1>Pre-order now!</h1>
 
         <p>We're still working hard on developing Startup Company. Show us your love and pre-order the
@@ -237,56 +239,6 @@ title: Startup Company: The Game
     ga('create', 'UA-9004302-9', 'auto');
     ga('send', 'pageview');
 
-    var tag = document.createElement('script');
-
-    tag.src = 'https://www.youtube.com/iframe_api';
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    var player;
-    var video = 'aBTtJ_JVQ5c'
-
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-            height: 430,
-            width: 764,
-            videoId: video,
-            events: {
-                'onStateChange': onPlayerStateChange,
-            }
-        });
-    }
-    ;
-
-    function onPlayerStateChange(event) {
-        switch (event.data) {
-            case YT.PlayerState.PLAYING:
-                if (cleanTime() == 0) {
-                    //console.log('started ' + cleanTime());
-                    ga('send', 'event', 'video', 'played', 'v: ' + video + ' | t: ' + cleanTime());
-
-                } else {
-                    //console.log('playing ' + cleanTime())
-                    ga('send', 'event', 'video', 'paused', 'v: ' + video + ' | t: ' + cleanTime());
-                }
-                ;
-                break;
-            case YT.PlayerState.PAUSED:
-                ga('send', 'event', 'video', 'paused');
-                break;
-            case YT.PlayerState.ENDED:
-                //console.log('ended ');
-                ga('send', 'event', 'video', 'ended', video);
-                break;
-        }
-        ;
-    }
-    ;
-
-    function cleanTime() {
-        return Math.round(player.getCurrentTime())
-    }
-    ;
 </script>
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
