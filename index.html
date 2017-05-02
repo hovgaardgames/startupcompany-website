@@ -287,8 +287,15 @@ title: Startup Company":" The Game
 {
       "@context": "http://schema.org",
       "@type": "VideoGame",
+      "applicationCategory": "Game",
       "name": "Startup Company",
+      "operatingSystem": ["OSX", "Windows","Linux"],
       "url": "https://www.startupcompanygame.com/",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "1"
+      },
       "image": "https://www.startupcompanygame.com/images/poster.jpg",
       "description": "Startup Company is a business simulation sandbox game. You're playing as the CEO of a newly started software company.",
       "inLanguage":["English","German","French","Russian","Chinese"],
@@ -298,7 +305,14 @@ title: Startup Company":" The Game
         "url":"http://www.hovgaardgames.com"
         },
       "publisher":"Hovgaard Games",
-      "genre":["Simulation","Construction and management simulation"]
+      "genre":["Simulation","Construction and management simulation"],
+        "offers": {
+          "@type": "Offer",
+          "price": "9.99",
+          "priceCurrency": "USD",
+          "url": "https://www.startupcompanygame.com/"
+        },
+        "sameAs": ["http://www.hovgaardgames.com/"]
   }</script>
 
 </body>
