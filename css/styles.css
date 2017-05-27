@@ -127,6 +127,10 @@ ul li {
     margin-top: 30px;
 }
 
+#steam-widget {
+    margin-bottom: 10px;
+}
+
 @media (max-width: 807px) {
     #logo img {
         max-width: 100%;
@@ -147,6 +151,10 @@ ul li {
 		text-align: center;
 		margin: 10px 0;
 	}
+
+    #steam-widget {
+        width: 100%;
+    }
 }
 
 
