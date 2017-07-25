@@ -157,42 +157,6 @@ ul li {
     }
 }
 
-
-/* Mailchimp overrides */
-#mc_embed_signup {
-    width: 100% !important;
-    background-color: transparent !important;
-    font-family: 'Exo 2', sans-serif !important;
-	font-size: 16px !important;
-	color: #586b8c !important;
-
-}
-
-
-
-#mc_embed_signup form {
-    padding: 0 !important;
-    text-align: center !important;
-}
-
-#mc_embed_signup div.mce_inline_error {
-	background-color: #cfd7e4 !important;
-	color: #586b8c !important;
-}
-
-#mc_embed_signup input.mce_inline_error {
-	border-color: #586b8c !important;
-}
-
-#mc_embed_signup div.response {
-    width: 100% !important;
-    padding: 0 !important;
-    margin: 0 0 20px 0 !important;
-}
-#mc_embed_signup .mc-field-group {
-	width: 100% !important;
-}
-
 #blog-body {
     background-color: #d0d7e3;
     font-family: 'Exo 2', sans-serif;
