@@ -6,14 +6,14 @@ title: Startup Company":" The Game
 {% include head.html %}
 <body id="landing-body">
 
-<h1 class="countdown">The <span class="orange">countdown</span> has begun!</h1>
+<h1 class="countdown hide-after-release">The <span class="orange">countdown</span> has begun!</h1>
 
 <div class="logo-container">
     <div class="dark-line"></div>
     <img src="images/logo.png" class="m-auto"/>
 </div>
 
-<div class="release-in">
+<div class="release-in hide-after-release">
     <h1>Full release in...</h1>
     <table>
         <tr class="values">
@@ -33,7 +33,7 @@ title: Startup Company":" The Game
     <hr>
 </div>
 
-<div class="email">
+<div class="email hide-after-release">
     <h2>Enter your email to get notified:</h2>
     <script type="text/javascript" src="https://static.mailerlite.com/data/webforms/1780276/w3r1z1.js?v9"></script>
 </div>
@@ -147,6 +147,7 @@ title: Startup Company":" The Game
         const hours = $('.hours')[0];
         const minutes = $('.minutes')[0];
         const seconds = $('.seconds')[0];
+        const prereleaseElements = $('.hide-after-release');
 
         const x = setInterval(function () {
             const now = new Date().getTime();
@@ -156,10 +157,12 @@ title: Startup Company":" The Game
             minutes.innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             seconds.innerText = Math.floor((distance % (1000 * 60)) / 1000);
 
+            prereleaseElements.show();
+
             // If the count down is finished, write some text
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
+                prereleaseElements.hide();
             }
         }, 1000);
     });

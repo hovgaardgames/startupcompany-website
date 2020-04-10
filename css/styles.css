@@ -234,3 +234,7 @@ ul {
 
 @media (max-width: 807px) {
 }
+
+.hide-after-release {
+    display: none;
+}
